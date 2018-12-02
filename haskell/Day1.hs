@@ -7,11 +7,7 @@ readChange xs       = read xs
 processChanges :: [String] -> Int
 processChanges xs = sum $ map readChange xs
 
-testChanges1 :: [String]
-testChanges1 = ["+1", "+1", "+1"]
-
-testChanges2 :: [String]
-testChanges2 = ["+1", "+1", "-2"]
-
-testChanges3 :: [String]
-testChanges3 = ["-1", "-2", "-6"]
+main :: IO ()
+main = do
+  input <- readFile "input.txt"
+  print $ processChanges (lines input)
