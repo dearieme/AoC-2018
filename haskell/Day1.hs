@@ -24,7 +24,7 @@ getRepeat xs = findFirstRepeat Map.empty runningTotals
 
 main :: IO ()
 main = do
-  input <- readFile "input.txt"
+  input <- readFile "day1_inputs.txt"
   let inputList = lines input
   putStr "Resulting frequency: "
   print $ sumChanges inputList
