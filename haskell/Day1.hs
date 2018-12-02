@@ -12,7 +12,7 @@ sumChanges xs = sum $ map readChange xs
 
 findFirstRepeat :: Map.Map Int Bool -> [Int] -> Int
 findFirstRepeat seen (x:xs) =
-  if isNothing $ Map.lookup x seen
+  if Map.member x seen
     then findFirstRepeat (Map.insert x True seen) xs
     else x
 
